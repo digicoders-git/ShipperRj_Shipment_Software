@@ -1,0 +1,324 @@
+/* Classic Premium Admin Styles for ShipperRJ */
+:root {
+    --primary-blue: #1a73e8;
+    --navy-blue: #1a237e;
+    --dark-charcoal: #1c222b;
+    --light-bg: #f8f9fa;
+    --border-color: #e9ecef;
+    --text-muted: #6c757d;
+    --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box !important;
+}
+
+html,
+body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+    position: relative;
+    width: 100% !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    background-color: #f1f4f9;
+    color: #333;
+}
+
+.wrapper {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    display: flex !important;
+}
+
+.page-wrapper {
+    min-width: 0 !important;
+    flex: 1 !important;
+    overflow-x: hidden !important;
+}
+
+.content-wrapper {
+    min-width: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Mobile Layout Fixes */
+@media (max-width: 767px) {
+
+    .page-wrapper,
+    .main-header {
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .navbar-fixed .main-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+    }
+
+    .navbar-fixed .page-wrapper {
+        padding-top: 70px !important;
+    }
+
+    .main-header,
+    .navbar {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .navbar .page-title {
+        max-width: 140px;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        font-size: 1rem !important;
+    }
+
+    .navbar-right {
+        margin-left: auto;
+    }
+}
+
+.navbar {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
+
+/* Sidebar Styling - Classic Charcoal */
+.left-sidebar {
+    background: var(--dark-charcoal) !important;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-inner li a {
+    padding: 14px 24px !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+    margin: 0 !important;
+    border-radius: 0 !important;
+}
+
+.sidebar-inner li a:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #fff !important;
+}
+
+.sidebar-inner li.active a {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+    /* border-left-color: var(--primary-blue); */
+}
+
+.sidebar-inner li a i {
+    font-size: 1.2rem !important;
+    margin-right: 15px !important;
+    opacity: 0.8;
+}
+
+.app-brand {
+    background: var(--dark-charcoal) !important;
+    height: 70px !important;
+    display: flex;
+    align-items: center;
+    padding: 0 24px !important;
+}
+
+/* Header Refinement */
+.navbar {
+    background: #fff !important;
+    border-bottom: 1px solid var(--border-color);
+    height: 70px !important;
+    overflow: visible !important;
+    /* Ensure dropdowns don't cause scrollbars */
+}
+
+.main-header {
+    overflow: visible !important;
+}
+
+/* Fix for jump/scroll on dropdown click */
+.navbar-right .dropdown-menu {
+    margin-top: 0 !important;
+    border: 1px solid #eee !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+/* User Menu Dropdown Hover Effects */
+.dropdown-link-item {
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease !important;
+    color: #444 !important;
+    text-decoration: none !important;
+}
+
+.dropdown-link-item:hover {
+    background-color: #f8f9ff !important;
+    color: var(--primary-blue) !important;
+    padding-left: 28px !important;
+    /* Premium slide-in effect */
+}
+
+.dropdown-link-item i {
+    margin-right: 12px !important;
+    font-size: 1.1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.dropdown-link-item:hover i {
+    color: var(--primary-blue) !important;
+    transform: scale(1.1);
+}
+
+
+/* Card - Clean & Minimalist */
+.card {
+    background: #fff !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: var(--border-radius-md) !important;
+    box-shadow: var(--card-shadow) !important;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #fff !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    padding: 1.25rem 1.5rem !important;
+}
+
+.card-header h2,
+.card-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy-blue);
+    margin: 0;
+}
+
+/* Professional Tables */
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #fcfcfc;
+    border-bottom: 2px solid var(--border-color) !important;
+    color: #5a5a5a;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 1.5rem !important;
+    border-top: none !important;
+}
+
+.table tbody td {
+    padding: 1rem 1.5rem !important;
+    vertical-align: middle;
+    font-size: 0.875rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9ff !important;
+}
+
+/* Buttons & Actions */
+.btn {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-sm);
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+}
+
+.btn-pill {
+    border-radius: 50px !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+.btn-info {
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
+
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.btn-success {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+}
+
+/* Status Badges */
+.badge {
+    padding: 0.4em 0.8em !important;
+    font-weight: 500 !important;
+    font-size: 85% !important;
+}
+
+/* Form Styling */
+.form-control {
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem 0.75rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(26, 115, 232, 0.25);
+}
+
+/* Modal Enhancements */
+.modal-content {
+    border: none;
+    border-radius: var(--border-radius-md);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1.25rem 1.5rem;
+}
+
+/* Responsive Table Fixes */
+.table-responsive {
+    display: block !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.table {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+}
